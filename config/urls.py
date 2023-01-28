@@ -13,6 +13,8 @@ urlpatterns = [
     path("vendors/", include("vendors.urls", namespace="vendors")),
     path("api/vendors/", include("vendors.api.urls", namespace="vendors_api")),
     path("products/", include("products.urls", namespace="products")),
+    path("carts/", include("carts.urls", namespace="carts")),
+    path("api/carts/", include("carts.api.urls", namespace="carts_api")),
 ]
 
 if settings.DEBUG:

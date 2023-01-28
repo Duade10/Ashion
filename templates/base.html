@@ -42,7 +42,10 @@
                 <div class="tip">2</div>
             </a></li>
             <li><a href="#"><span class="icon_bag_alt"></span>
-                <div class="tip">2</div>
+                <div class="tip" id="total-items-in-cart-mobile"></div>
+            </a></li>
+            <li><a><span class="icon_wallet_alt" style="width='100'"></span>
+                <div class="tip" id="grand-total-mobile"></div>
             </a></li>
         </ul>
         <div class="offcanvas__logo">
@@ -96,8 +99,11 @@
                             <li><a href="#"><span class="icon_heart_alt"></span>
                                 <div class="tip">2</div>
                             </a></li>
-                            <li><a href="#"><span class="icon_bag_alt"></span>
-                                <div class="tip">2</div>
+                            <li><a href="{% url 'carts:cart' %}"><span class="icon_bag_alt"></span>
+                                <div class="tip" id="total-items-in-cart"></div>
+                            </a></li>
+                            <li><a href="{% url 'carts:cart' %}"><span class="icon_money_alt"></span>
+                                <div class="tip" id="grand-total"></div>
                             </a></li>
                         </ul>
                     </div>
@@ -265,6 +271,7 @@
 <script src="{% static 'js/owl.carousel.min.js' %}"></script>
 <script src="{% static 'js/jquery.nicescroll.min.js' %}"></script>
 <script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/cart.data.js' %}"></script>
 </body>
 
 </html>
